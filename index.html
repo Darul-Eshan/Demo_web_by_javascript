@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <link rel="stylesheet" href="style.css">
+        <!-- Tailwind via CDN for quick inline utilities (no build step) -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- If you have a build step, use the following instead: -->
+        <!-- <link rel="stylesheet" href="/src/main.css"> -->
+         
+</head>
+<body>
+        <div class="max-w-xl mx-auto mt-12 p-6 bg-white rounded-lg shadow-lg">
+    <h2 class="max-w-xs mx-auto mt-2 p-4 text-center font-semibold bg-green-300">Input Number For Jokes</h2>
+    <div class="flex items-center">
+        <input type="number" class="flex-1 border border-gray-300 rounded px-3 py-2 mr-3" id="numberInput" placeholder="Enter a number">
+        <button class="bg-blue-600 text-white px-4 py-2" id="JokesButton">Jokes</button>
+    </div>
+    <div id="output" aria-live="polite" class="mt-4 text-gray-800"></div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

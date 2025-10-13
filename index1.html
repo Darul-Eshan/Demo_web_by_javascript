@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style1.css"> -->
+    <!-- Tailwind via CDN for quick inline utilities (no build step) -->
+     <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <header>
+        <div class="container bg-white shadow-md flex justify-between items-center p-4">
+            <!-- Logo -->
+        <div class="logo text-gray=800 font-bold text-2x1">My logo</div>
+            <!-- Mobail menu Button -->
+        <button class="text-2x1 md:hidden" id="menu-button">☰</button>
+
+            <!-- Navigation Links -->
+        <nav id="nav-menu" class="hidden md:flex space-x-6">
+            <a href="home" class="text-gray-600 hover:text-gray-900 font-medium">Home</a>
+            <a href="adout"class="text-gray-600 hover:text-gray-900 font-medium">Adout</a>
+            <a href="services"class="text-gray-600 hover:text-gray-900 font-medium">Services</a>
+            <a href="Contact"class="text-gray-600 hover:text-gray-900 font-medium">Contact</a>
+        </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome To my Website</h1>
+            <p>This is a short description about what we do. Make it Catchy!</p>
+            <a href="#" class="cta-button">Get Sstarted</a>
+      
+      
+        </div>
+    </section>
+    
+    <script src="script1.js"></script>
+</body>
+</html>
