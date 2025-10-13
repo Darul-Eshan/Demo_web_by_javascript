@@ -1,41 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- <link rel="stylesheet" href="style1.css"> -->
-    <!-- Tailwind via CDN for quick inline utilities (no build step) -->
-     <script src="https://cdn.tailwindcss.com"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header>
-        <div class="container bg-white shadow-md flex justify-between items-center p-4">
-            <!-- Logo -->
-        <div class="logo text-gray=800 font-bold text-2x1">My logo</div>
-            <!-- Mobail menu Button -->
-        <button class="text-2x1 md:hidden" id="menu-button">☰</button>
+<body class="bg-gray-50">
 
-            <!-- Navigation Links -->
-        <nav id="nav-menu" class="hidden md:flex space-x-6">
-            <a href="home" class="text-gray-600 hover:text-gray-900 font-medium">Home</a>
-            <a href="adout"class="text-gray-600 hover:text-gray-900 font-medium">Adout</a>
-            <a href="services"class="text-gray-600 hover:text-gray-900 font-medium">Services</a>
-            <a href="Contact"class="text-gray-600 hover:text-gray-900 font-medium">Contact</a>
-        </nav>
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <!-- Logo -->
+      <div class="text-blue-800 font-bold text-2xl">MyLogo</div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="text-3xl md:hidden focus:outline-none">☰</button>
+
+      <!-- Navigation -->
+      <nav id="nav-menu" class="hidden md:flex space-x-6">
+        <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Home</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">About</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Services</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900 font-medium">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero text-center py-20" id="hero-section">
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">Welcome to My Website</h1>
+    <p class="text-gray-600 mb-6">This is a short description about what we do. Make it catchy!</p>
+    <a href="#" class="cta-button inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition">Get Started</a>
+  </section>
+
+<!-- Box html -->
+<section class="py-20 bg-gray-50 " id="boxes-section">
+    <div class="container grid grid-cols-1 md:grid-cols-4 gap-6 mx-auto ">
+        <!-- box-1 -->
+        <div class="box bg-white p-6 rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+            <img src="resoruce\RxRLandingPage-1600x1600.jpg" alt="Box 1 Image" class="w-full h-48 object-cover">
+            <h2 class="text-xl font-bold mb-3">Box Title</h2>
+            <p class="text-gray-600 mb-4">this is the first line</br>
+                    this is the second line </br>
+            This is the third line
+            </p>
+            <a href="#" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">More</a>
         </div>
-    </header>
-    <section class="hero">
-        <div class="container">
-            <h1>Welcome To my Website</h1>
-            <p>This is a short description about what we do. Make it Catchy!</p>
-            <a href="#" class="cta-button">Get Sstarted</a>
-      
-      
+         <!-- box-2 -->
+        <div class="box bg-white p-6 rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+            <img src="resoruce\RxRLandingPage-1600x1600.jpg" alt="Box 1 Image" class="w-full h-48 object-cover">
+            <h2 class="text-xl font-bold mb-3">Box Title</h2>
+            <p class="text-gray-600 mb-4">this is the first line</br>
+                    this is the second line </br>
+            This is the third line
+            </p>
+            <a href="#" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">More</a>
         </div>
-    </section>
-    
-    <script src="script1.js"></script>
+         <!-- box-3 -->
+         <div class="box bg-white p-6 rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+            <img src="resoruce\images.jpg" alt="Box 1 Image" class="w-full h-48 object-cover">
+            <h2 class="text-xl font-bold mb-3">Box Title</h2>
+            <p class="text-gray-600 mb-4">this is the first line</br>
+                    this is the second line </br>
+            This is the third line
+            </p>
+            <a href="#" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">More</a>
+        </div>
+         <!-- box-4 -->
+        <div class="box bg-white p-6 rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+            <img src="resoruce\RxRLandingPage-1600x1600.jpg" alt="Box 1 Image" class="w-full h-48 object-cover">
+            <h2 class="text-xl font-bold mb-3">Box Title</h2>
+            <p class="text-gray-600 mb-4">this is the first line</br>
+                    this is the second line </br>
+            This is the third line
+            </p>
+            <a href="#" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">More</a>
+        </div>
+    </div>
+</section>
+<section id="team-slider" class="bg-gray-100 py-12">
+      <div class="slider-container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10">Meet our Team Member</h2>
+        
+        <!-- Slider container -->
+        <!-- Slider Container -->
+    <div class="relative overflow-hidden container   gap-6 mx-auto">
+      <div id="slider" class="flex transition-transform duration-700 ease-in-out">
+
+        <!-- Team Member 1 -->
+        <div class="w-1/4 p-4 flex-shrink-0">
+          <div class="bg-white rounded-lg shadow-md p-6 text-center w-60 h-80">
+            <img src="resoruce\1734524804956-1-1536x2048.jpg" alt="Member 1" class="w-40 h-40 mx-auto rounded-full mb-4">
+            <h3 class="text-xl font-semibold">John Doe</h3>
+            <p class="text-gray-500">CEO</p>
+          </div>
+        </div>
+
+        <!-- Team Member 1 -->
+        <div class="w-1/4 p-4 flex-shrink-0">
+          <div class="bg-white rounded-lg shadow-md p-6 text-center w-60 h-80">
+            <img src="resoruce\1734524804956-1-1536x2048.jpg" alt="Member 1" class="w-40 h-40 mx-auto rounded-full mb-4">
+            <h3 class="text-xl font-semibold">John Doe</h3>
+            <p class="text-gray-500">CEO</p>
+          </div>
+        </div>
+
+        <!-- Team Member 1 -->
+        <div class="w-1/4 p-4 flex-shrink-0">
+          <div class="bg-white rounded-lg shadow-md p-6 text-center w-60 h-80">
+            <img src="resoruce\1734524804956-1-1536x2048.jpg" alt="Member 1" class="w-40 h-40 mx-auto rounded-full mb-4">
+            <h3 class="text-xl font-semibold">John Doe</h3>
+            <p class="text-gray-500">CEO</p>
+          </div>
+        </div>
+
+       <!-- Team Member 1 -->
+        <div class="w-1/4 p-4 flex-shrink-0">
+          <div class="bg-white rounded-lg shadow-md p-6 text-center w-60 h-80">
+            <img src="resoruce\1734524804956-1-1536x2048.jpg" alt="Member 1" class="w-40 h-40 mx-auto rounded-full mb-4">
+            <h3 class="text-xl font-semibold">John Doe</h3>
+            <p class="text-gray-500">CEO</p>
+          </div>
+        </div>
+
+        <!-- Team Member 1 -->
+        <div class="w-1/4 p-4 flex-shrink-0">
+          <div class="bg-white rounded-lg shadow-md p-6 text-center w-60 h-80">
+            <img src="resoruce\1734524804956-1-1536x2048.jpg" alt="Member 1" class="w-40 h-40 mx-auto rounded-full mb-4">
+            <h3 class="text-xl font-semibold">John Doe</h3>
+            <p class="text-gray-500">CEO</p>
+          </div>
+        </div>
+
+        <!-- Team Member 1 -->
+        <div class="w-1/4 p-4 flex-shrink-0">
+          <div class="bg-white rounded-lg shadow-md p-6 text-center w-60 h-80">
+            <img src="resoruce\1734524804956-1-1536x2048.jpg" alt="Member 1" class="w-40 h-40 mx-auto rounded-full mb-4">
+            <h3 class="text-xl font-semibold">John Doe</h3>
+            <p class="text-gray-500">CEO</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+      </div>
+      <div class="flex justify-center gap-4 mt-8 ">
+        <button id="prev" class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-900  ">Prev</button>
+      <button id="next" class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-900  ">Next</button>
+      </div>
+</section>
+    <!-- Footer -->
+     <footer class="bg-gray-800 text-white py-10" id="footer-section">
+        <div class="footer-container max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
+            <div class="footer-logo">
+                <h2 class="text-2xl font-bold mb-4">My Website</h2>
+                <p class="text-gray-400">Building modern website with HTML</p>
+            </div>
+            <div class="footer-links">
+                <h3 class="text-xl font-semibold text-xl font-semibold mb-4">Quick links</h3>
+                <ul>
+                <a href="#" class="text-gray-400 hover:text-white">Home</a>
+                <a href="#" class="text-gray-400 hover:text-white">About</a>
+                <a href="#" class="text-gray-400 hover:text-white">Services</a>
+                <a href="#" class="text-gray-400 hover:text-white">Contact</a>
+                </ul>
+        </div>
+        <div class="footer-contact">
+            <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+            <p class="text-gray-400 mb-2">Email: info@mywebsite.com</p>
+            <p class="text-gray-400">Phone: +123 456 7890</p>
+        </div>
+        <div class="footer-copyrigt   text-gray-500 mx-auto">
+            <p>&copy; 2025 daruleshan. All rights reserved.</p>
+        </div>
+     </footer>
+
+  <!-- ✅ Always load JS at the END -->
+  <script src="script1.js"></script>
 </body>
+
 </html>
