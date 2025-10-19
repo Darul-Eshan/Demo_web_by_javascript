@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Callback and Promise Project</title>
+</head>
+<body>
+  <h2>Callback & Promise Demo</h2>
+  <button id="startBtn">Load User Info</button>
+
+  <p id="output"></p>
+
+  <script>
+    // ---------- Step 1: Callback ----------
+    function loadUser(callback) {
+      document.getElementById("output").innerText = "Loading user...";
+      setTimeout(() => {
+        const user = { name: "Eshan", age: 22 };
+        callback(user);
+      }, 2000);
+    }
+
+    // ---------- Step 2: Promise ----------
+    function loadUserDetails() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const success = true;
+          if (success) {
+            resolve({ hobby: "Coding", city: "Dhaka" });
+          } else {
+            reject("Error loading user details");
+          }
+        }, 2000);
+      });
+    }
+
+    // ---------- Step 3: Combine both ----------
+    document.getElementById("startBtn").addEventListener("click", () => {
+      loadUser((user) => {
+        document.getElementById("output").innerText =
+          `User: ${user.name}, Age: ${user.age}`;
+
+        // now load more info with Promise
+        loadUserDetails()
+          .then(details => {
+            document.getElementById("output").innerText +=
+              `\nHobby: ${details.hobby}, City: ${details.city}`;
+          })
+          .catch(err => {
+            document.getElementById("output").innerText = err;
+          });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Website</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 relative min-h-screen ">
+<!-- <div class="absolute inset-0 bg-black/50"></div> -->
 
   <!-- Header -->
   <header class="bg-white shadow-md">
@@ -27,6 +30,7 @@
     </div>
   </header>
 
+
   <!-- Hero Section -->
   <section class="hero text-center py-20" id="hero-section">
     <h1 class="text-4xl font-bold text-gray-800 mb-4">Welcome to My Website</h1>
@@ -34,25 +38,53 @@
     <a href="#" class="cta-button inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition">Get Started</a>
   </section>
 
+
+
+
+  
+    <div class="slideshow-containe 
+    bg-yellow-100 relative items-center h-96  
+    w-full text-center flex justify-center ">
+      <div id="slideshow" class="slideshow-elements font-bold  text-orange-500 
+      text-6xl text-center flex justify-center absolute
+      h-full w-full items-center">
+        <div class="shilde-element absolute opacity-0 scale-0">
+          <i class="fas fa-futbol  "></i>
+                <h2 class="">Football</h2>
+        </div>
+        <div class="shilde-element absolute opacity-0 scale-0">
+          <i class="fas fa-volleyball"></i>
+                <h2 class="">Volleyball</h2>
+        </div>
+        <div class="shilde-element absolute opacity-0 scale-0 ">
+          <i class="fas fa-swimmer  "></i>
+                <h2 class="">Swimmer</h2>
+        </div>
+      </div>
+    </div>
+
+
+
+
 <!-- Box html -->
-<section class="py-20 bg-gray-50 " id="boxes-section">
+<section class="py-20 bg-gray-50 flex justify-center " id="boxes-section">
     <div class="container grid grid-cols-1 md:grid-cols-4 gap-6 mx-auto ">
         <!-- box-1 -->
         <div class="box bg-white p-6 rounded-lg shadow hover:shadow-lg transition overflow-hidden">
             <img src="resoruce\RxRLandingPage-1600x1600.jpg" alt="Box 1 Image" class="w-full h-48 object-cover">
             <h2 class="text-xl font-bold mb-3">Box Title</h2>
-            <p class="text-gray-600 mb-4">this is the first line</br>
-                    this is the second line </br>
+      <p class="text-gray-600 mb-4">this is the first line<br>
+        this is the second line<br>
             This is the third line
             </p>
             <a href="#" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">More</a>
         </div>
          <!-- box-2 -->
         <div class="box bg-white p-6 rounded-lg shadow hover:shadow-lg transition overflow-hidden">
-            <img src="resoruce\RxRLandingPage-1600x1600.jpg" alt="Box 1 Image" class="w-full h-48 object-cover">
+            <img src="resoruce\RxRLandingPage-1600x1600.jpg "alt="Box 1 Image" class="w-full h-48 object-cover">
             <h2 class="text-xl font-bold mb-3">Box Title</h2>
-            <p class="text-gray-600 mb-4">this is the first line</br>
-                    this is the second line </br>
+      <p class="text-gray-600 mb-4">this is the first line<br>
+        this is the second line<br>
             This is the third line
             </p>
             <a href="#" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">More</a>
@@ -61,35 +93,35 @@
          <div class="box bg-white p-6 rounded-lg shadow hover:shadow-lg transition overflow-hidden">
             <img src="resoruce\images.jpg" alt="Box 1 Image" class="w-full h-48 object-cover">
             <h2 class="text-xl font-bold mb-3">Box Title</h2>
-            <p class="text-gray-600 mb-4">this is the first line</br>
-                    this is the second line </br>
+      <p class="text-gray-600 mb-4">this is the first line<br>
+        this is the second line<br>
             This is the third line
             </p>
             <a href="#" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">More</a>
         </div>
          <!-- box-4 -->
         <div class="box bg-white p-6 rounded-lg shadow hover:shadow-lg transition overflow-hidden">
-            <img src="resoruce\RxRLandingPage-1600x1600.jpg" alt="Box 1 Image" class="w-full h-48 object-cover">
+            <img src="resoruce\images.jpg" alt="Box 1 Image" class="w-full h-48 object-cover">
             <h2 class="text-xl font-bold mb-3">Box Title</h2>
-            <p class="text-gray-600 mb-4">this is the first line</br>
-                    this is the second line </br>
+      <p class="text-gray-600 mb-4">this is the first line<br>
+        this is the second line<br>
             This is the third line
             </p>
             <a href="#" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">More</a>
         </div>
     </div>
 </section>
-<section id="team-slider" class="bg-gray-100 py-12">
+<section id="team-section" class="bg-gray-100 py-12">
       <div class="slider-container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center mb-10">Meet our Team Member</h2>
         
         <!-- Slider container -->
         <!-- Slider Container -->
-    <div class="relative overflow-hidden container   gap-6 mx-auto">
-      <div id="slider" class="flex transition-transform duration-700 ease-in-out">
+    <div class="relative overflow-hidden container gap-6 mx-auto">
+      <div id="team-slider" class="team-slider flex transition-transform duration-700 ease-in-out">
 
         <!-- Team Member 1 -->
-        <div class="w-1/4 p-4 flex-shrink-0">
+        <div class="w-1/4 p-4 flex-shrink-0 flex justify-center team-card flex justify-center">
           <div class="bg-white rounded-lg shadow-md p-6 text-center w-60 h-80">
             <img src="resoruce\1734524804956-1-1536x2048.jpg" alt="Member 1" class="w-40 h-40 mx-auto rounded-full mb-4">
             <h3 class="text-xl font-semibold">John Doe</h3>
@@ -98,7 +130,7 @@
         </div>
 
         <!-- Team Member 1 -->
-        <div class="w-1/4 p-4 flex-shrink-0">
+        <div class="w-1/4 p-4 flex-shrink-0 flex justify-center team-card">
           <div class="bg-white rounded-lg shadow-md p-6 text-center w-60 h-80">
             <img src="resoruce\1734524804956-1-1536x2048.jpg" alt="Member 1" class="w-40 h-40 mx-auto rounded-full mb-4">
             <h3 class="text-xl font-semibold">John Doe</h3>
@@ -107,7 +139,7 @@
         </div>
 
         <!-- Team Member 1 -->
-        <div class="w-1/4 p-4 flex-shrink-0">
+        <div class="w-1/4 p-4 flex-shrink-0 flex justify-center team-card">
           <div class="bg-white rounded-lg shadow-md p-6 text-center w-60 h-80">
             <img src="resoruce\1734524804956-1-1536x2048.jpg" alt="Member 1" class="w-40 h-40 mx-auto rounded-full mb-4">
             <h3 class="text-xl font-semibold">John Doe</h3>
@@ -116,7 +148,7 @@
         </div>
 
        <!-- Team Member 1 -->
-        <div class="w-1/4 p-4 flex-shrink-0">
+        <div class="w-1/4 p-4 flex-shrink-0 flex justify-center team-card">
           <div class="bg-white rounded-lg shadow-md p-6 text-center w-60 h-80">
             <img src="resoruce\1734524804956-1-1536x2048.jpg" alt="Member 1" class="w-40 h-40 mx-auto rounded-full mb-4">
             <h3 class="text-xl font-semibold">John Doe</h3>
@@ -125,7 +157,7 @@
         </div>
 
         <!-- Team Member 1 -->
-        <div class="w-1/4 p-4 flex-shrink-0">
+        <div class="w-1/4 p-4 flex-shrink-0 flex justify-center team-card">
           <div class="bg-white rounded-lg shadow-md p-6 text-center w-60 h-80">
             <img src="resoruce\1734524804956-1-1536x2048.jpg" alt="Member 1" class="w-40 h-40 mx-auto rounded-full mb-4">
             <h3 class="text-xl font-semibold">John Doe</h3>
@@ -134,7 +166,7 @@
         </div>
 
         <!-- Team Member 1 -->
-        <div class="w-1/4 p-4 flex-shrink-0">
+        <div class="w-1/4 p-4 flex-shrink-0 team-card">
           <div class="bg-white rounded-lg shadow-md p-6 text-center w-60 h-80">
             <img src="resoruce\1734524804956-1-1536x2048.jpg" alt="Member 1" class="w-40 h-40 mx-auto rounded-full mb-4">
             <h3 class="text-xl font-semibold">John Doe</h3>
@@ -150,7 +182,94 @@
       <button id="next" class="bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-900  ">Next</button>
       </div>
 </section>
-    <!-- Footer -->
+
+
+<!-- -------------------------------------------------------------------
+------------------------------------------------------------------- -->
+<section class="bg-green-200 p-6 flex justify-center" id="news-section">
+  <div class=" px-4 " id="news-container">
+    <h2 class="text-4xl font-bold  text-center p-4" >News</h2>
+    <div class="news "id="news-cards">
+          <div class=" sm:grid-2 lg:grid-cols-4 grid gap-4 my-auto" >
+            <div class="news bg-white rounded-lg shadow hover:shadow-lg p-4 w-60 h-full my-auto">
+              <img src="resoruce\RxRLandingPage-1600x1600.jpg " class="h-60 w-60 p-4 object-cover ">
+            <h2 class="font-bold text-2xl text-center" >Dhaka</h2>
+            <p class=" p-4 text-center">this is the first line<br>
+              this is the second line<br>
+                  This is the third line
+                  
+                  </p>
+                 <div x-data="{colour: false}"
+                  class="flex justify-center">
+                    <a href="#" class="py-2 px-4 font-bold text-white shadow hover:shadow-lg rounded bg-indigo-600">More</a>
+                </div>
+            </div>     
+          </div>  
+    </div>
+  </div>
+</section>
+<!-- -------------------------------------------------------------------
+------------------------------------------------------------------- -->
+   
+<!-- 🦸 Hero Section -->
+  <section id="hero-section" 
+    x-data="{ show: false }"
+    x-init="setTimeout(() => show = true, 200)"
+    class="text-center"
+  >
+    <div 
+      x-show="show"
+      x-transition:enter="transition ease-out duration-1000"
+      x-transition:enter-start="opacity-0 translate-y-5"
+      x-transition:enter-end="opacity-100 translate-y-0"
+      class="p-6 bg-white rounded-lg shadow-lg"
+    >
+      <h1 class="text-3xl font-bold text-gray-800 mb-2">🌟 Welcome to My Hero Section</h1>
+      <p class="text-gray-600">Alpine.js + Tailwind দিয়ে সুন্দর Fade Up Animation</p>
+    </div>
+  </section>
+
+
+  <!-- 📦 Boxes Section -->
+  <section id="boxes-section" x-data="{ showBoxes: false }" x-init="setTimeout(() => showBoxes = true, 500)" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <template x-for="n in 6" :key="n">
+      <div
+        x-show="showBoxes"
+        x-transition:enter="transition ease-out duration-700"
+        x-transition:enter-start="opacity-0 translate-y-5"
+        x-transition:enter-end="opacity-100 translate-y-0"
+        class="box bg-white rounded-lg shadow-md p-6 text-center hover:scale-105 transform transition-transform duration-300 cursor-pointer"
+      >
+        <h3 class="text-lg font-semibold text-gray-800">Box <span x-text="n"></span></h3>
+        <p class="text-gray-600 text-sm mt-2">Hover করলে Scale effect হবে</p>
+      </div>
+    </template>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
      <footer class="bg-gray-800 text-white py-10" id="footer-section">
         <div class="footer-container max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8">
             <div class="footer-logo">
@@ -177,7 +296,7 @@
      </footer>
 
   <!-- ✅ Always load JS at the END -->
-  <script src="script1.js"></script>
+  <script src="js\script1.js"></script>
 </body>
 
 </html>
