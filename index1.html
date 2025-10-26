@@ -32,45 +32,63 @@
 
 
   <!-- Hero Section -->
-  <section class="hero text-center py-20" id="hero-section">
+  <section 
+  X-data="{show:false}"
+  x-init="setTimeout(()=>show=true,200)"
+  
+  class="hero text-center py-20 transition-all duration-1000 ease-out"
+  :class="show ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'"
+  id="hero-section">
     <h1 class="text-4xl font-bold text-gray-800 mb-4">Welcome to My Website</h1>
     <p class="text-gray-600 mb-6">This is a short description about what we do. Make it catchy!</p>
     <a href="#" class="cta-button inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition">Get Started</a>
   </section>
+  <!-- Slider Container -->
+ 
+    <div 
+  x-data="{ index: 0, slides: ['#slide1', '#slide2', '#slide3'] }" 
+  x-init="setInterval(() => { 
+      document.querySelector(slides[index]).classList.remove('opacity-100', 'scale-100');
+      document.querySelector(slides[index]).classList.add('opacity-0', 'scale-0');
 
+      index = (index + 1) % slides.length;
 
+      document.querySelector(slides[index]).classList.remove('opacity-0', 'scale-0');
+      document.querySelector(slides[index]).classList.add('opacity-100', 'scale-100');
+  }, 2000)"
+  class="relative w-full h-64 overflow-hidden "
+>
 
-
-  
-    <div class="slideshow-containe 
-    bg-yellow-100 relative items-center h-96  
-    w-full text-center flex justify-center ">
-      <div id="slideshow" class="slideshow-elements font-bold  text-orange-500 
-      text-6xl text-center flex justify-center absolute
-      h-full w-full items-center">
-        <div class="shilde-element absolute opacity-0 scale-0">
-          <i class="fas fa-futbol  "></i>
-                <h2 class="">Football</h2>
-        </div>
-        <div class="shilde-element absolute opacity-0 scale-0">
-          <i class="fas fa-volleyball"></i>
+  <!-- Slide 1 -->
+  <div id="slide1" class=" text-6xl inset-0 text-center absolute transition-all duration-700 opacity-100 scale-100 bg-blue-500 flex items-center justify-center text-white text-2xl font-bold">
+   <i class="fas fa-volleyball"></i>
                 <h2 class="">Volleyball</h2>
-        </div>
-        <div class="shilde-element absolute opacity-0 scale-0 ">
-          <i class="fas fa-swimmer  "></i>
+  </div>
+
+  <!-- Slide 2 -->
+  <div id="slide2" class="absolute inset-0 transition-all duration-700 opacity-0 scale-0 bg-green-500 flex items-center justify-center text-white text-2xl font-bold">
+   <i class="fas fa-swimmer  "></i>
                 <h2 class="">Swimmer</h2>
-        </div>
-      </div>
-    </div>
+  </div>
 
+  <!-- Slide 3 -->
+  <div id="slide3" class="absolute inset-0 transition-all duration-700 opacity-0 scale-0 bg-red-500 flex items-center justify-center text-white text-2xl font-bold">
+       <i class="fas fa-futbol  "></i>
+                <h2 class="">Football</h2>
+  </div>
 
+</div>
 
-
-<!-- Box html -->
-<section class="py-20 bg-gray-50 flex justify-center " id="boxes-section">
-    <div class="container grid grid-cols-1 md:grid-cols-4 gap-6 mx-auto ">
+  <!-- -------------------------------------------------------------------
+ Box html -->
+<section class="py-20 bg-gray-50 flex justify-center " id="boxes-section1">
+    <div class="container grid grid-cols-1 md:grid-cols-4 gap-6 mx-auto hover ">
         <!-- box-1 -->
-        <div class="box bg-white p-6 rounded-lg shadow hover:shadow-lg transition overflow-hidden">
+        <div class="box bg-white p-6  overflow-hidden
+         box  shadow-lg  text-center
+         transform transition duration-500 hover:-translate-y-3
+          hover:scale-105 hover:shadow-2xl">
+
             <img src="resoruce\RxRLandingPage-1600x1600.jpg" alt="Box 1 Image" class="w-full h-48 object-cover">
             <h2 class="text-xl font-bold mb-3">Box Title</h2>
       <p class="text-gray-600 mb-4">this is the first line<br>
@@ -228,44 +246,6 @@
       <p class="text-gray-600">Alpine.js + Tailwind দিয়ে সুন্দর Fade Up Animation</p>
     </div>
   </section>
-
-
-  <!-- 📦 Boxes Section -->
-  <section id="boxes-section" x-data="{ showBoxes: false }" x-init="setTimeout(() => showBoxes = true, 500)" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-    <template x-for="n in 6" :key="n">
-      <div
-        x-show="showBoxes"
-        x-transition:enter="transition ease-out duration-700"
-        x-transition:enter-start="opacity-0 translate-y-5"
-        x-transition:enter-end="opacity-100 translate-y-0"
-        class="box bg-white rounded-lg shadow-md p-6 text-center hover:scale-105 transform transition-transform duration-300 cursor-pointer"
-      >
-        <h3 class="text-lg font-semibold text-gray-800">Box <span x-text="n"></span></h3>
-        <p class="text-gray-600 text-sm mt-2">Hover করলে Scale effect হবে</p>
-      </div>
-    </template>
-  </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
